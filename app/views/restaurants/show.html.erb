@@ -1,0 +1,8 @@
+<h1 class='text-center'>Welcome to <%= @restaurant.name %></h1>
+
+<ul>
+<li> <%= @restaurant.name %> - <%= @restaurant.category %> -  <%= @restaurant.address %> <%= @restaurant.phone_number %> </li>
+</ul>
+<br>
+
+<%= link_to 'Back', restaurants_path %> |

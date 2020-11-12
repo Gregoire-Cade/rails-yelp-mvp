@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'restaurants#index'
+  resources :restaurants, only: [:index, :show, :new, :create]
 end
+
+# A visitor can see the list of all restaurants.
+# get "restaurants/", to: "restaurants#index" --> LIST ALL
+
+# A visitor can add a new restaurant, and be redirected to the show view of that new restaurant.
